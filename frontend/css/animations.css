@@ -1,0 +1,14 @@
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content > * {
+  opacity: 0; animation: fadeUp 0.8s ease forwards;
+}
+.hero-badge { animation-delay: 0.1s; }
+.hero h1 { animation-delay: 0.25s; }
+.hero-sub { animation-delay: 0.4s; }
+.hero-cta { animation-delay: 0.55s; }
+.hero-stats { animation-delay: 0.7s; }

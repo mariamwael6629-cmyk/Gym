@@ -1,0 +1,22 @@
+/* ── OPEN 24H BANNER ── */
+.banner-24 {
+  background: var(--red);
+  padding: 0; overflow: hidden;
+}
+.banner-track {
+  display: flex; gap: 60px;
+  padding: 22px 0;
+  animation: marquee 18s linear infinite;
+  white-space: nowrap;
+}
+body.ar .banner-track { animation-direction: reverse; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.banner-item {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; letter-spacing: 4px;
+  display: flex; align-items: center; gap: 20px;
+  flex-shrink: 0;
+}
+body.ar .banner-item { font-family: 'Cairo', sans-serif; font-weight: 900; letter-spacing: 0; }
+.banner-item .dot { width: 6px; height: 6px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; }

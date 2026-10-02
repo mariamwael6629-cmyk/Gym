@@ -1,0 +1,62 @@
+/* ── NAVBAR ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 6vw;
+  height: 72px;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 42px; height: 42px;
+  background: var(--gold);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px; color: var(--black); letter-spacing: 1px;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px; letter-spacing: 3px; color: var(--white);
+  line-height: 1;
+}
+.logo-text span { color: var(--gold); }
+
+.nav-links {
+  display: flex; align-items: center; gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none; color: var(--gray-light);
+  font-size: 13px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+body.ar .nav-links a { letter-spacing: 0; font-size: 14px; text-transform: none; }
+.nav-links a:hover { color: var(--gold); }
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 6px 14px; border-radius: 4px;
+  font-size: 12px; font-weight: 700; letter-spacing: 1px;
+  cursor: pointer; transition: all 0.2s;
+  font-family: inherit;
+}
+.lang-btn:hover { background: var(--gold); color: var(--black); }
+
+.burger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.burger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }

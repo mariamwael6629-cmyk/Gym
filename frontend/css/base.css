@@ -1,0 +1,34 @@
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --card: #181818;
+  --gold: #C9A84C;
+  --gold-light: #e8c97a;
+  --red: #C0392B;
+  --red-light: #e74c3c;
+  --white: #ffffff;
+  --gray: #888888;
+  --gray-light: #cccccc;
+  --border: rgba(201,168,76,0.2);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Barlow', sans-serif;
+  overflow-x: hidden;
+}
+
+body.ar {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+}
+
+[data-en], [data-ar] { transition: opacity 0.3s; }
+
+body.ar [data-en] { display: none !important; }
+body:not(.ar) [data-ar] { display: none !important; }

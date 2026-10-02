@@ -23,10 +23,14 @@ Gym/
 ├── frontend/
 │   ├── index.html          # Main single-page site
 │   ├── css/
-│   │   └── style.css       # Clean, modern UI & responsive styles
+│   │   ├── base.css        # Tokens + reset
+│   │   ├── navbar.css, footer.css, responsive.css, animations.css
+│   │   └── sections/       # hero, shared, about, services, open-banner, testimonials, facilities, location, contact
 │   └── js/
-│       ├── config.js       # API base URL configuration
-│       └── app.js          # Language toggle, API fetches, & form handling
+│       ├── core/           # config.js (API base URL), helpers.js
+│       ├── ui/             # navbar (language toggle + burger), scroll-reveal
+│       ├── sections/       # gym-info, services, testimonials, contact-form (API fetches & form handling)
+│       └── main.js         # Init
 │
 └── backend/
     ├── app/
@@ -112,7 +116,7 @@ python -m http.server 5500
 
 Now open your browser and visit: `http://localhost:5500`
 
-> ⚠️ **Configuration Note:** The frontend references `window.API_BASE_URL` defined in `frontend/js/config.js` (defaults to `http://localhost:8000`). Make sure to modify this file if your backend is running on a different port or host.
+> ⚠️ **Configuration Note:** The frontend references `window.API_BASE_URL` defined in `frontend/js/core/config.js` (defaults to `http://localhost:8000`). Make sure to modify this file if your backend is running on a different port or host.
 
 ---
 
@@ -171,7 +175,7 @@ openssl rand -hex 32
 
 
 3. **CORS Hardening:** Update `CORS_ORIGINS` inside production environment parameters to whitelist only your explicit public frontend URL domain.
-4. **Endpoint URL Syncing:** Change `API_BASE_URL` inside `frontend/js/config.js` to point directly to your deployed backend API URL endpoint.
+4. **Endpoint URL Syncing:** Change `API_BASE_URL` inside `frontend/js/core/config.js` to point directly to your deployed backend API URL endpoint.
 5. **Static Hosting:** The static `frontend/` folder can be optimally hosted for free via platforms like **GitHub Pages**, **Vercel**, or served through a reverse proxy server like **Nginx**.
 
 ```
