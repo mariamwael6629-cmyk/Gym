@@ -131,8 +131,8 @@ async function loadGymInfo() {
     setText('footerHoursEn', info.working_hours_en);
     setText('footerHoursAr', info.working_hours_ar);
 
-    setText('footerBrandDescEn', `${info.name_en} — ${info.tagline_en}. Professional coaches, elite equipment, and a welcoming atmosphere available around the clock.`);
-    setText('footerBrandDescAr', `${info.name_ar} — ${info.tagline_ar}. مدربون محترفون، معدات متطورة، وأجواء ترحيبية على مدار الساعة.`);
+    setText('footerBrandDescEn', `${info.name_en}. ${info.tagline_en}. Certified coaches and a clean, quiet floor.`);
+    setText('footerBrandDescAr', `${info.name_ar}. ${info.tagline_ar}. مدربون معتمدون ومكان نظيف وهادئ.`);
 
     const year = new Date().getFullYear();
     setText('footerCopyEn', `© ${year} ${info.name_en}. All rights reserved.`);
@@ -161,8 +161,8 @@ async function loadServices() {
       <article class="service-card">
         <div class="service-card-bg" style="background-image: url('${s.image_url}')"></div>
         <div class="service-card-content">
-          <div class="service-num" data-en>${String(idx + 1).padStart(2, '0')} — SERVICE</div>
-          <div class="service-num" data-ar>٠${idx + 1} — خدمة</div>
+          <div class="service-num" data-en>Zone ${idx + 1}</div>
+          <div class="service-num" data-ar>المنطقة ${(idx + 1).toLocaleString('ar-EG')}</div>
           <h3 class="service-title" data-en>${s.title_en}</h3>
           <h3 class="service-title" data-ar>${s.title_ar}</h3>
           <p class="service-desc" data-en>${s.description_en}</p>
