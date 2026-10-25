@@ -20,35 +20,62 @@ langToggle.addEventListener('click', () => {
     document.documentElement.dir = 'ltr';
     langToggle.textContent = 'العربية';
   }
+  renderOpenNow();
 });
 
+// ---------- "Open now" sign (the club never closes, so this is always true) ----------
+const openNow = document.getElementById('openNow');
+function renderOpenNow() {
+  if (!openNow) return;
+  const locale = isAr ? 'ar-EG' : 'en-US';
+  const time = new Date().toLocaleTimeString(locale, { hour: 'numeric', minute: '2-digit' });
+  openNow.textContent = isAr ? `الساعة ${time} — مفتوح الآن` : `It's ${time} — we're open`;
+  openNow.hidden = false;
+}
+renderOpenNow();
+setInterval(renderOpenNow, 30000);
+
 burger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  const open = navLinks.classList.toggle('open');
+  burger.setAttribute('aria-expanded', String(open));
 });
 
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  });
 });
 
-// ---------- Scroll reveal ----------
-function observeRevealTargets() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
+const nav = document.querySelector('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-  document.querySelectorAll('.pillar, .testimonial-card, .service-card, .facility-item, .location-info .info-row').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease, border-color 0.3s';
-    observer.observe(el);
+
+// ---------- Section entrances (skipped for reduced motion) ----------
+const revealObserver = 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches
+  ? new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' })
+  : null;
+
+function armReveal(root = document) {
+  if (!revealObserver) return;
+  const groups = root.querySelectorAll('.section-heading, .section-sub, .about-img, .about-pillars, .service-card, .testimonial-card, .facility-item, .info-row, .map-container, .contact-form');
+  groups.forEach((el) => {
+    if (el.classList.contains('rv') || el.getBoundingClientRect().top < innerHeight) return;
+    const siblings = [...el.parentElement.children].filter((c) => c.classList.contains(el.classList[0]));
+    el.style.setProperty('--d', `${Math.min(siblings.indexOf(el), 4) * 80}ms`);
+    el.classList.add('rv');
+    revealObserver.observe(el);
   });
 }
-observeRevealTargets();
+armReveal();
 
 // ---------- Helpers ----------
 function splitLogoWords(name) {
@@ -131,26 +158,28 @@ async function loadServices() {
 
     const grid = document.getElementById('servicesGrid');
     grid.innerHTML = services.map((s, idx) => `
-      <div class="service-card">
+      <article class="service-card">
         <div class="service-card-bg" style="background-image: url('${s.image_url}')"></div>
-        <div class="service-card-overlay"></div>
         <div class="service-card-content">
           <div class="service-num" data-en>${String(idx + 1).padStart(2, '0')} — SERVICE</div>
           <div class="service-num" data-ar>٠${idx + 1} — خدمة</div>
-          <div class="service-title" data-en>${s.title_en}</div>
-          <div class="service-title" data-ar>${s.title_ar}</div>
-          <div class="service-desc" data-en>${s.description_en}</div>
-          <div class="service-desc" data-ar>${s.description_ar}</div>
+          <h3 class="service-title" data-en>${s.title_en}</h3>
+          <h3 class="service-title" data-ar>${s.title_ar}</h3>
+          <p class="service-desc" data-en>${s.description_en}</p>
+          <p class="service-desc" data-ar>${s.description_ar}</p>
         </div>
-      </div>
+      </article>
     `).join('');
-    observeRevealTargets();
+    armReveal(grid);
   } catch (err) {
     console.warn('Falling back to static services — backend unavailable:', err);
   }
 }
 
 // ---------- Testimonials ----------
+const STAR = '<svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>';
+const STAR_OFF = '<svg class="ic off" aria-hidden="true"><use href="#i-star"/></svg>';
+
 function initials(name) {
   return (name || '').split(' ').map(p => p[0]).filter(Boolean).slice(0, 2).join('').toUpperCase();
 }
@@ -164,22 +193,23 @@ async function loadTestimonials() {
 
     const grid = document.getElementById('testimonialsGrid');
     grid.innerHTML = testimonials.map(t => `
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <div class="stars">${'★'.repeat(t.rating)}${'☆'.repeat(5 - t.rating)}</div>
-        <p class="testimonial-text" data-en>${t.text_en}</p>
-        <p class="testimonial-text" data-ar>${t.text_ar || t.text_en}</p>
-        <div class="reviewer">
+      <figure class="testimonial-card">
+        <div class="stars" role="img" aria-label="${t.rating} / 5">${STAR.repeat(t.rating)}${STAR_OFF.repeat(5 - t.rating)}</div>
+        <blockquote>
+          <p class="testimonial-text" data-en>${t.text_en}</p>
+          <p class="testimonial-text" data-ar>${t.text_ar || t.text_en}</p>
+        </blockquote>
+        <figcaption class="reviewer">
           <div class="reviewer-avatar">${initials(t.reviewer_name)}</div>
           <div>
             <div class="reviewer-name">${t.reviewer_name}</div>
             <div class="reviewer-label" data-en>Verified Member</div>
             <div class="reviewer-label" data-ar>عضو موثوق</div>
           </div>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     `).join('');
-    observeRevealTargets();
+    armReveal(grid);
   } catch (err) {
     console.warn('Falling back to static testimonials — backend unavailable:', err);
   }
@@ -209,9 +239,11 @@ function initContactForm() {
       return;
     }
 
-    const submitBtn = form.querySelector('button[type="submit"]');
+    // The visible button for the current language (EN and AR buttons both exist)
+    const submitBtn = form.querySelector(isAr ? 'button[type="submit"][data-ar]' : 'button[type="submit"][data-en]');
+    const submitLabel = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
+    submitBtn.textContent = isAr ? 'جارٍ الإرسال…' : 'Sending...';
 
     try {
       const res = await fetch(`${API_BASE_URL}/api/contact`, {
@@ -233,7 +265,7 @@ function initContactForm() {
       status.textContent = typeof err.message === 'string' ? err.message : 'Could not send your message. Please try again later.';
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
+      submitBtn.innerHTML = submitLabel;
     }
   });
 }

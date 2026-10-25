@@ -3,11 +3,39 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#0B4F45"/>
 <title>Apex Fitness Center | نادي أبكس للياقة البدنية</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800;900&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+
+<!-- Pictogram set: one stroke weight, drawn for signage -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M19 16v4M17 18h4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-coach" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 12l-1.5 9 5-3 5 3-1.5-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-calm" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M5 19l8-8" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M2 12h20M5 8v8M8 6v12M16 6v12M19 8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H16M8 3v3M12 3v3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10l6 1 6-1M12 11v4M9 21l3-6 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z" fill="currentColor"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M4 20l1.2-4A8.5 8.5 0 1 1 8 18.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2z" fill="currentColor"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.6 2.4 4.4 5 4.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4L2.7 9.5l6.5-.7z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#about"><span data-en>Skip to content</span><span data-ar>انتقل إلى المحتوى</span></a>
 
 <!-- NAVBAR -->
 <nav>
@@ -21,50 +49,56 @@
     <li><a href="#testimonials" data-en>Reviews</a><a href="#testimonials" data-ar>آراء العملاء</a></li>
     <li><a href="#location" data-en>Location</a><a href="#location" data-ar>الموقع</a></li>
     <li><a href="#contact" data-en>Contact</a><a href="#contact" data-ar>تواصل معنا</a></li>
-    <li><a id="navPhoneLink" href="tel:+15550102024" class="btn-outline" style="padding:8px 20px;font-size:13px">📞 <span id="navPhoneText">+1 (555) 010-2024</span></a></li>
+    <li><a id="navPhoneLink" href="tel:+15550102024" class="nav-phone"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span id="navPhoneText" dir="ltr">+1 (555) 010-2024</span></a></li>
     <li><button class="lang-btn" id="langToggle">العربية</button></li>
   </ul>
-  <button class="burger" id="burger" aria-label="Menu">
+  <button class="burger" id="burger" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-badge" data-en id="heroBadgeEn">Your Premier Fitness Destination</div>
-    <div class="hero-badge" data-ar id="heroBadgeAr">وجهتك الأولى للياقة البدنية</div>
+  <div class="hero-sign">
+    <div class="hero-content">
+      <h1 data-en>ELEVATE <span class="accent">YOUR</span> BODY &amp;&nbsp;<span class="accent-red">MIND</span></h1>
+      <h1 data-ar>ارتقِ بجسدك <span class="accent">وعقلك</span> معنا</h1>
 
-    <h1 data-en>ELEVATE<br><span class="accent">YOUR</span><br>BODY &amp; <span class="accent-red">MIND</span></h1>
-    <h1 data-ar>ارتقِ بجسدك<br><span class="accent">وعقلك</span><br>معنا</h1>
+      <p class="hero-sub" data-en>Where elite equipment meets a calm, professional atmosphere. Train hard. Live well. Open 24 hours.</p>
+      <p class="hero-sub" data-ar>حيث تلتقي المعدات الاحترافية بأجواء هادئة ومحترمة. تدرّب بجدية. عِش بصحة. مفتوح ٢٤ ساعة.</p>
 
-    <p class="hero-sub" data-en>Where elite equipment meets a calm, professional atmosphere. Train hard. Live well. Open 24 hours.</p>
-    <p class="hero-sub" data-ar>حيث تلتقي المعدات الاحترافية بأجواء هادئة ومحترمة. تدرّب بجدية. عِش بصحة. مفتوح ٢٤ ساعة.</p>
-
-    <div class="hero-cta">
-      <a href="#contact" class="btn-primary" data-en>Join Now</a>
-      <a href="#contact" class="btn-primary" data-ar>اشترك الآن</a>
-      <a href="#about" class="btn-outline" data-en>Discover More</a>
-      <a href="#about" class="btn-outline" data-ar>اكتشف المزيد</a>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary" data-en>Join Now <svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#contact" class="btn-primary" data-ar>اشترك الآن <svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#about" class="btn-outline" data-en>Discover More</a>
+        <a href="#about" class="btn-outline" data-ar>اكتشف المزيد</a>
+      </div>
     </div>
 
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">24H</div>
-        <div class="stat-label" data-en>Always Open</div>
-        <div class="stat-label" data-ar>مفتوح دائماً</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">3</div>
-        <div class="stat-label" data-en>World-Class Zones</div>
-        <div class="stat-label" data-ar>مناطق احترافية</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">★5</div>
-        <div class="stat-label" data-en>Member Rated</div>
-        <div class="stat-label" data-ar>تقييم الأعضاء</div>
-      </div>
+    <div class="hero-foot">
+      <div class="hero-badge" data-en id="heroBadgeEn">Your Premier Fitness Destination</div>
+      <div class="hero-badge" data-ar id="heroBadgeAr">وجهتك الأولى للياقة البدنية</div>
+      <p class="open-now" id="openNow" aria-live="polite" hidden></p>
+    </div>
+  </div>
+
+  <div class="hero-photo" role="img" aria-label="Apex Fitness training floor"></div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">24H</div>
+      <div class="stat-label" data-en>Always Open</div>
+      <div class="stat-label" data-ar>مفتوح دائماً</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label" data-en>World-Class Zones</div>
+      <div class="stat-label" data-ar>مناطق احترافية</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><svg class="ic star" aria-hidden="true"><use href="#i-star"/></svg>5</div>
+      <div class="stat-label" data-en>Member Rated</div>
+      <div class="stat-label" data-ar>تقييم الأعضاء</div>
     </div>
   </div>
 </section>
@@ -77,11 +111,6 @@
     <span class="banner-item"><span data-en>IN-HOUSE CAFÉ</span><span data-ar>كافيه داخلي</span> <span class="dot"></span></span>
     <span class="banner-item"><span data-en>KIDS ZONE</span><span data-ar>منطقة الأطفال</span> <span class="dot"></span></span>
     <span class="banner-item"><span data-en>ULTRA CLEAN</span><span data-ar>نظافة فائقة</span> <span class="dot"></span></span>
-    <span class="banner-item"><span data-en>OPEN 24 HOURS</span><span data-ar>مفتوح ٢٤ ساعة</span> <span class="dot"></span></span>
-    <span class="banner-item"><span data-en>PRO COACHES</span><span data-ar>مدربون محترفون</span> <span class="dot"></span></span>
-    <span class="banner-item"><span data-en>IN-HOUSE CAFÉ</span><span data-ar>كافيه داخلي</span> <span class="dot"></span></span>
-    <span class="banner-item"><span data-en>KIDS ZONE</span><span data-ar>منطقة الأطفال</span> <span class="dot"></span></span>
-    <span class="banner-item"><span data-en>ULTRA CLEAN</span><span data-ar>نظافة فائقة</span> <span class="dot"></span></span>
   </div>
 </div>
 
@@ -89,24 +118,24 @@
 <section id="about">
   <div class="about-grid">
     <div class="about-img">
-      <div class="about-img-main"></div>
+      <div class="about-img-main" role="img" aria-label="Members training at Apex Fitness"></div>
       <div class="about-img-badge">
         <strong>24/7</strong>
         <span data-en>ALWAYS<br>OPEN</span>
         <span data-ar>مفتوح<br>دائماً</span>
       </div>
     </div>
-    <div>
+    <div class="about-copy">
       <div class="section-tag" data-en>About Us</div>
       <div class="section-tag" data-ar>عن النادي</div>
-      <h2 class="section-heading" data-en>MORE THAN A GYM —<br>A LIFESTYLE</h2>
-      <h2 class="section-heading" data-ar>أكثر من مجرد جيم<br>أسلوب حياة</h2>
+      <h2 class="section-heading" data-en>MORE THAN A GYM — A LIFESTYLE</h2>
+      <h2 class="section-heading" data-ar>أكثر من مجرد جيم، أسلوب حياة</h2>
       <p class="section-sub" data-en>We've built a space where fitness meets peace of mind. Every detail — from the spotless facilities to the respectful coaching staff — is designed to help you achieve more.</p>
       <p class="section-sub" data-ar>أنشأنا مساحة تجمع بين اللياقة البدنية وراحة البال. كل تفصيلة — من النظافة الاستثنائية إلى الكوادر التدريبية المحترمة — مصممة لمساعدتك على التفوق.</p>
 
       <div class="about-pillars">
         <div class="pillar">
-          <div class="pillar-icon">✨</div>
+          <div class="pillar-icon"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg></div>
           <div>
             <div class="pillar-title" data-en>Exceptional Cleanliness</div>
             <div class="pillar-title" data-ar>نظافة استثنائية</div>
@@ -115,7 +144,7 @@
           </div>
         </div>
         <div class="pillar">
-          <div class="pillar-icon">🏆</div>
+          <div class="pillar-icon"><svg class="ic" aria-hidden="true"><use href="#i-coach"/></svg></div>
           <div>
             <div class="pillar-title" data-en>Professional Coaches</div>
             <div class="pillar-title" data-ar>كابتنات محترفون ومحترمون</div>
@@ -124,7 +153,7 @@
           </div>
         </div>
         <div class="pillar">
-          <div class="pillar-icon">🧘</div>
+          <div class="pillar-icon"><svg class="ic" aria-hidden="true"><use href="#i-calm"/></svg></div>
           <div>
             <div class="pillar-title" data-en>Peaceful & Motivating Atmosphere</div>
             <div class="pillar-title" data-ar>أجواء هادئة ومحفزة</div>
@@ -146,134 +175,134 @@
       <h2 class="section-heading" data-en>OUR THREE WORLDS</h2>
       <h2 class="section-heading" data-ar>عوالمنا الثلاثة</h2>
     </div>
-    <p class="section-sub" style="max-width:320px" data-en>Everything you need for a complete lifestyle — under one roof.</p>
-    <p class="section-sub" style="max-width:320px" data-ar>كل ما تحتاجه لأسلوب حياة متكامل — تحت سقف واحد.</p>
+    <p class="section-sub" data-en>Everything you need for a complete lifestyle — under one roof.</p>
+    <p class="section-sub" data-ar>كل ما تحتاجه لأسلوب حياة متكامل — تحت سقف واحد.</p>
   </div>
 
   <div class="services-grid" id="servicesGrid">
-    <div class="service-card">
+    <article class="service-card">
       <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80')"></div>
-      <div class="service-card-overlay"></div>
       <div class="service-card-content">
         <div class="service-num" data-en>01 — PRO GYM</div>
         <div class="service-num" data-ar>٠١ — الجيم الاحترافي</div>
-        <div class="service-title" data-en>APEX GYM</div>
-        <div class="service-title" data-ar>جيم أبكس</div>
-        <div class="service-desc" data-en>State-of-the-art bodybuilding and cardio equipment. Every machine you need to reach your peak physique.</div>
-        <div class="service-desc" data-ar>أحدث معدات بناء الجسم والكارديو. كل جهاز تحتاجه للوصول إلى قمة لياقتك البدنية.</div>
+        <h3 class="service-title" data-en>APEX GYM</h3>
+        <h3 class="service-title" data-ar>جيم أبكس</h3>
+        <p class="service-desc" data-en>State-of-the-art bodybuilding and cardio equipment. Every machine you need to reach your peak physique.</p>
+        <p class="service-desc" data-ar>أحدث معدات بناء الجسم والكارديو. كل جهاز تحتاجه للوصول إلى قمة لياقتك البدنية.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="service-card">
+    <article class="service-card">
       <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80')"></div>
-      <div class="service-card-overlay"></div>
       <div class="service-card-content">
         <div class="service-num" data-en>02 — CAFETERIA</div>
         <div class="service-num" data-ar>٠٢ — الكافيتيريا</div>
-        <div class="service-title" data-en>APEX CAFÉ</div>
-        <div class="service-title" data-ar>كافيه أبكس</div>
-        <div class="service-desc" data-en>Fuel your performance with nutritious post-workout meals and healthy supplements at our in-house café.</div>
-        <div class="service-desc" data-ar>زوّد أداءك بوجبات ما بعد التمرين المغذية والمكملات الصحية في كافيتيريا الجيم.</div>
+        <h3 class="service-title" data-en>APEX CAFÉ</h3>
+        <h3 class="service-title" data-ar>كافيه أبكس</h3>
+        <p class="service-desc" data-en>Fuel your performance with nutritious post-workout meals and healthy supplements at our in-house café.</p>
+        <p class="service-desc" data-ar>زوّد أداءك بوجبات ما بعد التمرين المغذية والمكملات الصحية في كافيتيريا الجيم.</p>
       </div>
-    </div>
+    </article>
 
-    <div class="service-card">
+    <article class="service-card">
       <div class="service-card-bg" style="background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&q=80')"></div>
-      <div class="service-card-overlay"></div>
       <div class="service-card-content">
         <div class="service-num" data-en>03 — FOR THE FAMILY</div>
         <div class="service-num" data-ar>٠٣ — للعائلة</div>
-        <div class="service-title" data-en>KIDS AREA</div>
-        <div class="service-title" data-ar>منطقة الأطفال</div>
-        <div class="service-desc" data-en>A safe, fun zone for your children — so you can train without worry while the little ones play.</div>
-        <div class="service-desc" data-ar>منطقة آمنة وممتعة لأطفالك — حتى تتمكن من التدريب دون قلق بينما يلعب الصغار.</div>
+        <h3 class="service-title" data-en>KIDS AREA</h3>
+        <h3 class="service-title" data-ar>منطقة الأطفال</h3>
+        <p class="service-desc" data-en>A safe, fun zone for your children — so you can train without worry while the little ones play.</p>
+        <p class="service-desc" data-ar>منطقة آمنة وممتعة لأطفالك — حتى تتمكن من التدريب دون قلق بينما يلعب الصغار.</p>
       </div>
-    </div>
+    </article>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div style="text-align: center; margin-bottom: 8px;">
-    <div class="section-tag" style="justify-content: center" data-en>Real Members, Real Results</div>
-    <div class="section-tag" style="justify-content: center" data-ar>أعضاء حقيقيون، نتائج حقيقية</div>
+<section id="testimonials" class="testimonials">
+  <div class="testimonials-head">
+    <div class="section-tag" data-en>Real Members, Real Results</div>
+    <div class="section-tag" data-ar>أعضاء حقيقيون، نتائج حقيقية</div>
     <h2 class="section-heading" data-en>WHAT THEY SAY</h2>
     <h2 class="section-heading" data-ar>ماذا يقولون</h2>
   </div>
 
   <div class="testimonials-grid" id="testimonialsGrid">
-    <div class="testimonial-card">
-      <div class="quote-mark">"</div>
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text" data-en>An amazing place... it adds beautiful feelings and gives you psychological comfort and calm.</p>
-      <p class="testimonial-text" data-ar>مكان رائع... يضيف مشاعر جميلة ويمنحك الراحة النفسية والهدوء.</p>
-      <div class="reviewer">
+    <figure class="testimonial-card">
+      <div class="stars" role="img" aria-label="5 / 5"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></div>
+      <blockquote>
+        <p class="testimonial-text" data-en>An amazing place... it adds beautiful feelings and gives you psychological comfort and calm.</p>
+        <p class="testimonial-text" data-ar>مكان رائع... يضيف مشاعر جميلة ويمنحك الراحة النفسية والهدوء.</p>
+      </blockquote>
+      <figcaption class="reviewer">
         <div class="reviewer-avatar">JL</div>
         <div>
           <div class="reviewer-name">Jordan Lee</div>
           <div class="reviewer-label" data-en>Verified Member</div>
           <div class="reviewer-label" data-ar>عضو موثوق</div>
         </div>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
 
-    <div class="testimonial-card">
-      <div class="quote-mark">"</div>
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text" data-en>A sports club, cafeteria, and kids area. A beautiful place — everything you need in one spot.</p>
-      <p class="testimonial-text" data-ar>نادٍ رياضي وكافيتيريا ومنطقة أطفال. مكان جميل — كل ما تحتاجه في مكان واحد.</p>
-      <div class="reviewer">
+    <figure class="testimonial-card">
+      <div class="stars" role="img" aria-label="5 / 5"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></div>
+      <blockquote>
+        <p class="testimonial-text" data-en>A sports club, cafeteria, and kids area. A beautiful place — everything you need in one spot.</p>
+        <p class="testimonial-text" data-ar>نادٍ رياضي وكافيتيريا ومنطقة أطفال. مكان جميل — كل ما تحتاجه في مكان واحد.</p>
+      </blockquote>
+      <figcaption class="reviewer">
         <div class="reviewer-avatar">SR</div>
         <div>
           <div class="reviewer-name">Sam Rivera</div>
           <div class="reviewer-label" data-en>Verified Member</div>
           <div class="reviewer-label" data-ar>عضو موثوق</div>
         </div>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
 
-    <div class="testimonial-card">
-      <div class="quote-mark">"</div>
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text" data-en>Excellent and clean. The coaches are all tasteful and professional — the best in the area.</p>
-      <p class="testimonial-text" data-ar>ممتاز ونظيف. المدربون كلهم ذوو ذوق واحترافية — الأفضل في المنطقة.</p>
-      <div class="reviewer">
+    <figure class="testimonial-card">
+      <div class="stars" role="img" aria-label="5 / 5"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></div>
+      <blockquote>
+        <p class="testimonial-text" data-en>Excellent and clean. The coaches are all tasteful and professional — the best in the area.</p>
+        <p class="testimonial-text" data-ar>ممتاز ونظيف. المدربون كلهم ذوو ذوق واحترافية — الأفضل في المنطقة.</p>
+      </blockquote>
+      <figcaption class="reviewer">
         <div class="reviewer-avatar">TM</div>
         <div>
           <div class="reviewer-name">Taylor Morgan</div>
           <div class="reviewer-label" data-en>Verified Member</div>
           <div class="reviewer-label" data-ar>عضو موثوق</div>
         </div>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- FACILITIES QUICK STRIP -->
 <div class="facilities-row">
   <div class="facility-item">
-    <div class="facility-icon">💪</div>
+    <div class="facility-icon"><svg class="ic" aria-hidden="true"><use href="#i-dumbbell"/></svg></div>
     <div class="facility-title" data-en>Elite Equipment</div>
     <div class="facility-title" data-ar>معدات متطورة</div>
     <div class="facility-desc" data-en>Latest bodybuilding & cardio machines</div>
     <div class="facility-desc" data-ar>أحدث أجهزة الجسم والكارديو</div>
   </div>
   <div class="facility-item">
-    <div class="facility-icon">🥗</div>
+    <div class="facility-icon"><svg class="ic" aria-hidden="true"><use href="#i-cup"/></svg></div>
     <div class="facility-title" data-en>Healthy Café</div>
     <div class="facility-title" data-ar>كافيه صحي</div>
     <div class="facility-desc" data-en>Nutrition-focused post-workout fuel</div>
     <div class="facility-desc" data-ar>تغذية مركّزة بعد التمرين</div>
   </div>
   <div class="facility-item">
-    <div class="facility-icon">👶</div>
+    <div class="facility-icon"><svg class="ic" aria-hidden="true"><use href="#i-child"/></svg></div>
     <div class="facility-title" data-en>Kids Zone</div>
     <div class="facility-title" data-ar>منطقة أطفال</div>
     <div class="facility-desc" data-en>Safe supervised play area</div>
     <div class="facility-desc" data-ar>منطقة لعب آمنة ومُشرفة</div>
   </div>
   <div class="facility-item">
-    <div class="facility-icon">🕛</div>
+    <div class="facility-icon"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></div>
     <div class="facility-title" data-en>Open 24/7</div>
     <div class="facility-title" data-ar>مفتوح ٢٤/٧</div>
     <div class="facility-desc" data-en>Train on your schedule, any time</div>
@@ -291,7 +320,7 @@
   <div class="location-grid">
     <div class="location-info">
       <div class="info-row">
-        <div class="info-icon">📍</div>
+        <div class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></div>
         <div>
           <div class="info-label" data-en>Address</div>
           <div class="info-label" data-ar>العنوان</div>
@@ -300,15 +329,15 @@
         </div>
       </div>
       <div class="info-row">
-        <div class="info-icon">📞</div>
+        <div class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></div>
         <div>
           <div class="info-label" data-en>Phone</div>
           <div class="info-label" data-ar>الهاتف</div>
-          <div class="info-value"><a id="phoneValueLink" href="tel:+15550102024"><span id="phoneValueText">+1 (555) 010-2024</span></a></div>
+          <div class="info-value"><a id="phoneValueLink" href="tel:+15550102024"><span id="phoneValueText" dir="ltr">+1 (555) 010-2024</span></a></div>
         </div>
       </div>
       <div class="info-row">
-        <div class="info-icon">🕐</div>
+        <div class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></div>
         <div>
           <div class="info-label" data-en>Working Hours</div>
           <div class="info-label" data-ar>ساعات العمل</div>
@@ -317,22 +346,25 @@
         </div>
       </div>
       <div class="info-row">
-        <div class="info-icon">📱</div>
+        <div class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-share"/></svg></div>
         <div>
           <div class="info-label" data-en>Follow Us</div>
           <div class="info-label" data-ar>تابعنا</div>
           <div class="social-row">
-            <a id="locSocialFacebook" href="#" class="social-btn" title="Facebook">f</a>
-            <a id="locSocialInstagram" href="#" class="social-btn" title="Instagram">📸</a>
-            <a id="locSocialWhatsapp" href="#" class="social-btn" title="WhatsApp">💬</a>
-            <a id="locSocialTiktok" href="#" class="social-btn" title="TikTok">♪</a>
+            <a id="locSocialFacebook" href="#" class="social-btn" aria-label="Facebook"><svg class="ic" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+            <a id="locSocialInstagram" href="#" class="social-btn" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+            <a id="locSocialWhatsapp" href="#" class="social-btn" aria-label="WhatsApp"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+            <a id="locSocialTiktok" href="#" class="social-btn" aria-label="TikTok"><svg class="ic" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="map-container">
-      <div class="map-placeholder-icon">📍</div>
+      <svg class="map-streets" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path d="M-10 210 L410 160" /><path d="M120 -10 L160 310" /><path d="M-10 70 L410 40" class="minor"/><path d="M290 -10 L270 310" class="minor"/><path d="M-10 270 L200 310" class="minor"/>
+      </svg>
+      <div class="map-pin"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></div>
       <div class="map-placeholder-text" data-en>Map preview unavailable for this demo location.<br><span id="mapAddressText">456 Wellness Avenue, Springfield, ST 62704, USA</span></div>
       <div class="map-placeholder-text" data-ar>معاينة الخريطة غير متاحة لهذا الموقع التجريبي.<br>456 شارع العافية، سبرينغفيلد</div>
     </div>
@@ -341,43 +373,17 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-  <div class="section-tag" data-en>Get In Touch</div>
-  <div class="section-tag" data-ar>تواصل معنا</div>
-  <h2 class="section-heading" data-en>JOIN APEX FITNESS</h2>
-  <h2 class="section-heading" data-ar>انضم إلى أبكس فيتنس</h2>
-  <p class="section-sub" data-en>Send us a message and a member of our team will reach out about memberships, trial sessions, or anything else.</p>
-  <p class="section-sub" data-ar>أرسل لنا رسالة وسيتواصل معك أحد أعضاء فريقنا بخصوص العضويات أو الجلسات التجريبية أو أي استفسار آخر.</p>
-
-  <div class="contact-grid">
-    <form class="contact-form" id="contactForm">
-      <div class="form-group">
-        <label data-en for="contactName">Full Name</label>
-        <label data-ar for="contactName">الاسم الكامل</label>
-        <input type="text" id="contactName" name="name" required maxlength="120" />
-      </div>
-      <div class="form-group">
-        <label data-en for="contactEmail">Email</label>
-        <label data-ar for="contactEmail">البريد الإلكتروني</label>
-        <input type="email" id="contactEmail" name="email" required maxlength="120" />
-      </div>
-      <div class="form-group">
-        <label data-en for="contactPhone">Phone (optional)</label>
-        <label data-ar for="contactPhone">الهاتف (اختياري)</label>
-        <input type="tel" id="contactPhone" name="phone" maxlength="40" />
-      </div>
-      <div class="form-group">
-        <label data-en for="contactMessage">Message</label>
-        <label data-ar for="contactMessage">الرسالة</label>
-        <textarea id="contactMessage" name="message" rows="5" required maxlength="2000"></textarea>
-      </div>
-      <div id="contactFormStatus" class="form-status"></div>
-      <button type="submit" class="btn-primary" data-en>Send Message</button>
-      <button type="submit" class="btn-primary" data-ar>إرسال الرسالة</button>
-    </form>
+  <div class="contact-intro">
+    <div class="section-tag" data-en>Get In Touch</div>
+    <div class="section-tag" data-ar>تواصل معنا</div>
+    <h2 class="section-heading" data-en>JOIN APEX FITNESS</h2>
+    <h2 class="section-heading" data-ar>انضم إلى أبكس فيتنس</h2>
+    <p class="section-sub" data-en>Send us a message and a member of our team will reach out about memberships, trial sessions, or anything else.</p>
+    <p class="section-sub" data-ar>أرسل لنا رسالة وسيتواصل معك أحد أعضاء فريقنا بخصوص العضويات أو الجلسات التجريبية أو أي استفسار آخر.</p>
 
     <div class="contact-info-list">
       <div class="info-row">
-        <div class="info-icon">📍</div>
+        <div class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></div>
         <div>
           <div class="info-label" data-en>Address</div>
           <div class="info-label" data-ar>العنوان</div>
@@ -385,15 +391,15 @@
         </div>
       </div>
       <div class="info-row">
-        <div class="info-icon">📞</div>
+        <div class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></div>
         <div>
           <div class="info-label" data-en>Phone</div>
           <div class="info-label" data-ar>الهاتف</div>
-          <div class="info-value">+1 (555) 010-2024</div>
+          <div class="info-value" dir="ltr">+1 (555) 010-2024</div>
         </div>
       </div>
       <div class="info-row">
-        <div class="info-icon">✉️</div>
+        <div class="info-icon"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></div>
         <div>
           <div class="info-label" data-en>Email</div>
           <div class="info-label" data-ar>البريد الإلكتروني</div>
@@ -402,23 +408,49 @@
       </div>
     </div>
   </div>
+
+  <form class="contact-form" id="contactForm">
+    <div class="form-group">
+      <label data-en for="contactName">Full Name</label>
+      <label data-ar for="contactName">الاسم الكامل</label>
+      <input type="text" id="contactName" name="name" required maxlength="120" autocomplete="name" />
+    </div>
+    <div class="form-group">
+      <label data-en for="contactEmail">Email</label>
+      <label data-ar for="contactEmail">البريد الإلكتروني</label>
+      <input type="email" id="contactEmail" name="email" required maxlength="120" autocomplete="email" />
+    </div>
+    <div class="form-group">
+      <label data-en for="contactPhone">Phone (optional)</label>
+      <label data-ar for="contactPhone">الهاتف (اختياري)</label>
+      <input type="tel" id="contactPhone" name="phone" maxlength="40" autocomplete="tel" />
+    </div>
+    <div class="form-group">
+      <label data-en for="contactMessage">Message</label>
+      <label data-ar for="contactMessage">الرسالة</label>
+      <textarea id="contactMessage" name="message" rows="5" required maxlength="2000"></textarea>
+    </div>
+    <div id="contactFormStatus" class="form-status" role="status"></div>
+    <button type="submit" class="btn-primary" data-en>Send Message <svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    <button type="submit" class="btn-primary" data-ar>إرسال الرسالة <svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+  </form>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="nav-logo" style="text-decoration:none">
+      <div class="nav-logo">
         <div class="logo-icon">AF</div>
         <div class="logo-text"><span id="footerLogoFirst">APEX</span> <span id="footerLogoRest">FITNESS CENTER</span></div>
       </div>
       <p data-en id="footerBrandDescEn">Apex Fitness Center — Your premier fitness destination. Professional coaches, elite equipment, and a welcoming atmosphere available 24 hours a day.</p>
       <p data-ar id="footerBrandDescAr">نادي أبكس للياقة البدنية — وجهتك الأولى للياقة البدنية. مدربون محترفون، معدات متطورة، وأجواء ترحيبية على مدار الساعة.</p>
       <div class="social-row">
-        <a id="footSocialFacebook" href="#" class="social-btn">f</a>
-        <a id="footSocialInstagram" href="#" class="social-btn">📸</a>
-        <a id="footSocialWhatsapp" href="#" class="social-btn">💬</a>
-        <a id="footSocialTiktok" href="#" class="social-btn">♪</a>
+        <a id="footSocialFacebook" href="#" class="social-btn" aria-label="Facebook"><svg class="ic" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        <a id="footSocialInstagram" href="#" class="social-btn" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        <a id="footSocialWhatsapp" href="#" class="social-btn" aria-label="WhatsApp"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+        <a id="footSocialTiktok" href="#" class="social-btn" aria-label="TikTok"><svg class="ic" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
       </div>
     </div>
 
@@ -438,12 +470,14 @@
       <h4 data-en>Contact</h4>
       <h4 data-ar>تواصل معنا</h4>
       <ul class="footer-links">
-        <li><a id="footerPhoneLink" href="tel:+15550102024"><span id="footerPhoneText">+1 (555) 010-2024</span></a></li>
+        <li><a id="footerPhoneLink" href="tel:+15550102024"><span id="footerPhoneText" dir="ltr">+1 (555) 010-2024</span></a></li>
         <li><a href="#location"><span data-en id="footerAddressEn">Springfield, USA</span><span data-ar id="footerAddressAr">سبرينغفيلد، الولايات المتحدة</span></a></li>
         <li><a href="#location"><span data-en id="footerHoursEn">Open 24/7</span><span data-ar id="footerHoursAr">مفتوح ٢٤/٧</span></a></li>
       </ul>
     </div>
   </div>
+
+  <div class="footer-name" aria-hidden="true"><span data-en>APEX</span><span data-ar>أبكس</span></div>
 
   <div class="footer-bottom">
     <span data-en id="footerCopyEn">© 2026 Apex Fitness Center. All rights reserved.</span>
